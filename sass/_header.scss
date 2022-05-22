@@ -1,0 +1,131 @@
+.header {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+  height: auto;
+  background: url("../dist/assets/meeting.jpg") no-repeat center;
+  background-size: cover;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $primary-color;
+    opacity: 0.7;
+  }
+
+  &__navigation {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__logo {
+      padding-left: 1rem;
+
+      &-brand {
+        color: $secondary-color;
+        text-transform: uppercase;
+      }
+    }
+
+    &__nav {
+      @include small;
+
+      &__menu {
+        display: flex;
+        list-style: none;
+
+        &.open {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 3rem;
+        }
+
+        &__list {
+          padding-right: 2rem;
+
+          a {
+            text-decoration: none;
+            color: $text-color;
+            text-transform: uppercase;
+            font-size: 1rem;
+            font-weight: 600;
+
+            &.active {
+              color: $secondary-color;
+            }
+
+            &:hover {
+              color: $secondary-color;
+            }
+          }
+        }
+      }
+
+      &.open {
+        position: fixed;
+        top: 1rem;
+        right: 0;
+        background-color: $primary-color;
+        z-index: 2;
+        opacity: 1;
+        width: 75%;
+        height: inherit;
+        visibility: visible;
+        overflow: auto;
+        padding: 2rem 0;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+  }
+
+  &__showcase {
+    position: relative;
+    line-height: 1.2;
+    padding: 2rem;
+
+    &__heading {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-top: 3rem;
+      font-weight: 900;
+      color: $text-color;
+    }
+
+    &__description {
+      font-size: 1.3rem;
+      color: $text-color;
+      font-weight: 300;
+      text-align: center;
+      padding-top: 1.5rem;
+    }
+
+    &__btn {
+      border: none;
+      border-radius: 0.5rem;
+      padding: 1rem 2rem;
+      background-color: $secondary-color;
+      color: $text-color;
+      margin: 3rem auto 0 auto;
+      cursor: pointer;
+      font-size: 1.5rem;
+      text-align: center;
+      text-transform: capitalize;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        background-color: transparent;
+        border: 2px solid $secondary-color;
+      }
+    }
+  }
+}

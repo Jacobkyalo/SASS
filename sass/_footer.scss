@@ -1,0 +1,22 @@
+.footer {
+  background-color: lighten($secondary-color, 30%);
+  padding: 1rem 2rem;
+  color: $text-color;
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .links a {
+      color: $text-color;
+      padding-right: 1rem;
+      font-size: 2rem;
+
+      &:hover {
+        color: $secondary-color;
+        transition: all 2s ease-in-out;
+      }
+    }
+  }
+}
