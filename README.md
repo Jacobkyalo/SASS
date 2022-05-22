@@ -1,4 +1,4 @@
-# Collections landing
+# Collections landing page
 
 Testing on responsive skills like:
 
